@@ -1,0 +1,1 @@
+insert into student.audit(status_) values("run_stop")

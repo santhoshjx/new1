@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: Student
+    description: 'First DBT'
+    #database:
+    schema: student
+    #freshness:
+      #warn_after: {count: 20, period: hour}
+      #error_after: {count: 30, period: hour}
+    #loaded_at_field:
+    tables:
+      - name: students
+        columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+
+              - not_null
+              - duplicate
+
+      - name: students2
+        columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+              - duplicate
+
+      - name: students1
+        columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+
+          - name: phone
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+      #- name: students3
+        #freshness:
+          #warn_after: {count: 20, period: hour}
+          #error_after: {count: 30, period: hour}
+        #load_at_field: updated_date
+        #columns:
+           # - name: updated_date
+             # description: "The primary key for this table"
+             # tests:
+              #  - unique
+              #  - not_null
+

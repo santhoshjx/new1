@@ -1,0 +1,1 @@
+select * from {{ref('Student_students')}} group by id having count(*)>1

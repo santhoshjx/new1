@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: Student
+    description: 'First DBT'
+    #database:
+    schema: student
+    #freshness:
+      #warn_after: {count: 30, period: minute}
+      #error_after: {count: 40, period: minute}
+    #loaded_at_field: updated_date
+    tables:
+      - name: students3
+        columns:
+          - name: id
+          - name: name
+          - name: dept
+          - name: phone
+          - name: email
+          - name: teacher_id
+          - name: updated_date
